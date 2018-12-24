@@ -3,7 +3,6 @@ import json
 import time
 
 TOKEN = 'ed1271af9e8883f7a7c2cefbfddfcbc61563029666c487b2f71a5227cce0d1b533c4af4c5b888633c06ae'
-# TOKEN = input()
 
 class VKuser:
 
@@ -22,7 +21,7 @@ class VKuser:
 
     def friends(self):
         params = {
-            'vk_id': self.vk_id,
+            'user_id': self.vk_id,
             'access_token': TOKEN,
             'v': '5.92',
             'fields': 'domain'
@@ -36,7 +35,7 @@ class VKuser:
 
     def groups(self):
         params = {
-            'vk_id': self.vk_id,
+            'user_id': self.vk_id,
             'extended': '1',
             'access_token': TOKEN,
             'v': '5.92',
